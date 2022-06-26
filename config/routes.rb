@@ -10,5 +10,10 @@ Rails.application.routes.draw do
   
   
   
-  resources :users
+  resources :users do
+    member do
+     get 'edit_basic_info'
+     patch 'updte_basic_info'
+     end
+    end
 end
